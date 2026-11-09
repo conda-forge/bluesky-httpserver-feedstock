@@ -1,5 +1,5 @@
 {% set name = "bluesky-httpserver" %}
-{% set version = "0.0.13" %}
+{% set version = "0.0.15" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 8d9b3fbe8ea1e7a8418f16860408757f467c794f7052fd102fbc66c10572ac02
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 6a027d8cd064e5eae35edf5da33e1aefa837f380d2727c7d27cf1ae2e8a09ace
 
 build:
   number: 0
@@ -25,15 +25,19 @@ requirements:
     - alembic
     - bluesky-queueserver
     - bluesky-queueserver-api
+    - cachetools    
     - fastapi
+    - httpx2
     - ldap3
     - orjson
+    - pandas
     - pamela
-    - pydantic-settings
+    - pydantic >=2,<3
+    - pydantic-settings >=2
     - python-jose
     - pyzmq
     - requests
-    - sqlalchemy
+    - sqlalchemy >=2
     - starlette
     - uvicorn
 
