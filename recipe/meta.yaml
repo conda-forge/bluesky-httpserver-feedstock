@@ -25,15 +25,18 @@ requirements:
     - alembic
     - bluesky-queueserver
     - bluesky-queueserver-api
+    - cachetools    
     - fastapi
+    - httpx2
     - ldap3
     - orjson
     - pamela
-    - pydantic-settings
+    - pydantic >=2,<3
+    - pydantic-settings >=2
     - python-jose
     - pyzmq
     - requests
-    - sqlalchemy
+    - sqlalchemy >=2
     - starlette
     - uvicorn
 
