@@ -15,7 +15,6 @@ build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
-
 requirements:
   host:
     - python {{ python_min }}
@@ -31,6 +30,7 @@ requirements:
     - httpx2
     - ldap3
     - orjson
+    - pandas
     - pamela
     - pydantic >=2,<3
     - pydantic-settings >=2
